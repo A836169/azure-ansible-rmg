@@ -6,6 +6,12 @@
    rg: "azure-learning"
 
   tasks:
+
+  - name: Install msrestazure,msrest python package
+    ansible.builtin.pip:
+      name: 
+        - msrest
+        - msrestazure
     
   - name: Get facts for all virtual machines of a resource group
     azure_rm_virtualmachine_info:
