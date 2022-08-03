@@ -14,7 +14,8 @@
   #       - msrestazure
 
   - name: list azure collection
-    shell: ansible-galaxy collection list
+    #shell: ansible-galaxy collection list
+    shell: ansible --version
     register: azureList
     
   # - name: Get facts for all virtual machines of a resource group
