@@ -15,18 +15,18 @@
 
   - name: list azure collection
     #shell: ansible-galaxy collection list
-    shell: ansible --version
+    shell: ansible-galaxy collection install azure.azcollection
     register: azureList
     
-  # - name: Get facts for all virtual machines of a resource group
-  #   azure_rm_virtualmachine_info:
-  #     resource_group: "{{ rg }}"
-  #   register: vm_info
-  #   delegate_to: localhost
+  - name: Get facts for all virtual machines of a resource group
+    azure_rm_virtualmachine_info:
+      resource_group: "{{ rg }}"
+    register: vm_info
+    delegate_to: localhost
 
-  # - name: display output
-  #   debug:
-  #     msg: "info: {{ vm_info }}"
+  - name: display output
+    debug:
+      msg: "info: {{ vm_info }}"
 
   - name: display output
     debug:
