@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
   vars:
-   rg: "azure-learning"
+   rg: "rmg-poc-atossupport-ase01"
 
   tasks:
 
@@ -13,10 +13,10 @@
   #       - msrest
   #       - msrestazure
 
-  - name: list azure collection
+  #- name: list azure collection
     #shell: ansible-galaxy collection list
-    shell: ansible-galaxy collection install azure.azcollection
-    register: azureList
+    #shell: ansible-galaxy collection install azure.azcollection
+    #register: azureList
     
   - name: Get facts for all virtual machines of a resource group
     azure_rm_virtualmachine_info:
